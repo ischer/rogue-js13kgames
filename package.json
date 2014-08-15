@@ -1,14 +1,14 @@
 {
-  "name": "ewfwrogue",
+  "name": "rogu-js13kgames",
   "version": "0.0.0",
-  "description": "roguelike for js13kgames",
-  "main": "none",
+  "description": "roguelike entry for js13kgames",
+  "main": "game.js",
   "scripts": {
     "test": "none"
   },
   "repository": {
     "type": "git",
-    "url": "none"
+    "url": "https://github.com/hots0uce/rogue-js13kgames"
   },
   "keywords": [
     "none"

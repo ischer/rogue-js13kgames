@@ -2,7 +2,10 @@ var dimensions = {
 		width: 150,
 		height: 150
 	},
-	fillPercent = 0.5;
+	fillPercent = 0.5,
+	getRandomInt = function(min, max) {
+	    return Math.floor(Math.random() * (max - min + 1)) + min;
+	};
 
 exports.generate = function() {
 	var i = 0, j,
@@ -21,7 +24,7 @@ exports.generate = function() {
 	map[pos.x][pos.y] = 1;
 	++floor;
 	while(floor/wall < fillPercent) {
-		pos = exports.pickAdjacent();
+		pos = exports.pickAdjacent(pos);
 		map[pos.x][pos.y] = 1;
 		++floor;
 	}
@@ -32,12 +35,18 @@ exports.generate = function() {
 
 exports.pickStart = function() {
 	return {
-		x: 0,
-		y: 0
+		x: getRandomInt(1,150),
+		y: getRandomInt(1,150)
 	};
 };
 
-exports.pickAdjacent = function(x,y) {
+exports.pickAdjacent = function(pos) {
+	var can = {
+		n: pos.y-1 > -1,
+		s: pos.y+1 < dimensions.y+1,
+		e: pos.x+1 < dimensions.x+1,
+		w: pos.x-1 > -1
+	};
 	return {
 		x: 0,
 		y: 0

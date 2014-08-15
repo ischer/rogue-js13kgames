@@ -1,0 +1,25 @@
+{
+  "name": "ewfwrogue",
+  "version": "0.0.0",
+  "description": "roguelike for js13kgames",
+  "main": "none",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "none",
+  "license": "none",
+  "devDependencies": {
+    "browserify": "^5.10.0",
+    "gulp": "^3.8.7",
+    "gulp-browserify": "^0.5.0",
+    "gulp-jshint": "^1.8.4",
+    "gulp-uglify": "^0.3.1"
+  }
+}

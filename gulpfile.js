@@ -7,6 +7,14 @@ gulp.task('default', function() {
     // Single entry point to browserify
     gulp.src('src/game.js')
         .pipe(browserify())
+        .pipe(gulp.dest('./dist/js'))
+});
+
+gulp.task('dist', function() {
+    // Single entry point to browserify
+    gulp.src('src/game.js')
+        .pipe(browserify())
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js'))
 });
+
